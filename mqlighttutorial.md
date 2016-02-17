@@ -11,6 +11,7 @@ In this tutorial you will learn how to use MQ Light. You will also learn how to 
 
 ####Logging in to your Bluemix Account
 1. Login to your Bluemix Account. 
+
 2. If you don't have an account yet or forgot to create one since it expired last week, create one. 
 
 

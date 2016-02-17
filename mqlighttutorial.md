@@ -21,9 +21,9 @@ In this part, you will download two applications to be deployed at Bluemix.
 
 1. Create the directory `mqlighttutorial` in the root directory. 
 
-2. Download [MQLight-Sender.war](https://github.com/riv5181/riv5181.github.io/blob/master/MQ-Light-Resources/Source%20Codes/mqlight-tutorial-sender/build/libs/MQLight-Sender.war) and save it in the `mqlighttutorial` subdirectory. 
+2. Download [MQLight-Sender.war](https://github.com/riv5181/riv5181.github.io/blob/master/MQ-Light-Resources/Source%20Codes/mqlight-tutorial-sender/build/libs/MQLight-Sender.war?raw=true) and save it in the `mqlighttutorial` subdirectory. 
 
-3. Download [MQLight-Receiver.war](https://github.com/riv5181/riv5181.github.io/blob/master/MQ-Light-Resources/Source%20Codes/mqlight-tutorial-receiver/build/libs/MQLight-Receiver.war) and save it in the `mqlighttutorial` subdirectory. 
+3. Download [MQLight-Receiver.war](https://github.com/riv5181/riv5181.github.io/blob/master/MQ-Light-Resources/Source%20Codes/mqlight-tutorial-receiver/build/libs/MQLight-Receiver.war?raw=true) and save it in the `mqlighttutorial` subdirectory. 
 
 <br>
 

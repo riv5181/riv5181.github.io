@@ -28,36 +28,18 @@ In this part, you will download two applications to be deployed at Bluemix.
 <br>
 
 
-####Deploy Sample Application in Bluemix using the `cf` tool.
+####Deploy MQLight Applications in Bluemix using the `cf` tool.
 
-1. Open a terminal window and go to the `myfirstapp` subdirectory.
+1. Open a terminal window and go to the `mqlighttutorial` subdirectory.
 
-1. Login to your Bluemix account using the `cf` tool.
+2. Login to your Bluemix account using the `cf` tool.
 
 	```text
 	> cf login -a https://api.ng.bluemix.net -s dev
 	```
 	
 	>When asked for a username (e-mail address) and password, enter the username and password of your Bluemix account.
-
-	**Output:**
-
-	```
-	API endpoint: https://api.ng.bluemix.net
 	
-	Username> -----
-	
-	Password>
-	Authenticating...
-	OK
-	
-	Targeted space dev
-	
-	API endpoint: https://api.ng.bluemix.net (API version: 2.40.0)
-	User:         -----
-	Org:          -----
-	Space:        dev
-	```
 	
 	The `-a` switch allows you to specify the URL of the Bluemix region.  In this tutorial, you are using the `US South` region.  The URL of this region is `https://api.ng.bluemix.net`.
 
@@ -65,30 +47,26 @@ In this part, you will download two applications to be deployed at Bluemix.
 
 	<br>
 	
-1. Upload the sample application to your Bluemix account.
+3. Upload the [MQLight-Sender.war](https://github.com/riv5181/riv5181.github.io/blob/master/MQ-Light-Resources/Source%20Codes/mqlight-tutorial-sender/build/libs/MQLight-Sender.war?raw=true) file to your Bluemix account.
 
 	```text
-	> cf push myfirstapp-<your_name> -m 256M -p PostgreSQLUpload.war
+	> cf push MQLight-Sender-<your_name> -m 256M -p MQLight-Sender.war
 	```
+	
+4. Upload the [MQLight-Receiver.war](https://github.com/riv5181/riv5181.github.io/blob/master/MQ-Light-Resources/Source%20Codes/mqlight-tutorial-receiver/build/libs/MQLight-Receiver.war?raw=true) file to your Bluemix account.
+	
+	```text
+	> cf push MQLight-Receiver-<your_name> -m 256M -p MQLight-Receiver.war
+	```
+
 
 	**Example:**
 		
 	```text
-	> cf push myfirstapp-pong -m 256M -p PostgreSQLUpload.war
+	> cf push MQLight-Sender-riv5181 -m 256M -p MQLight-Sender.war
+	> cf push MQLight-Receiver-riv5181 -m 256M -p MQLight-Receiver.war
 	```
-
-	**Output:**
-		
-	```text
-	:
-	:
-	     state     since                    cpu    memory           disk
-	#0   running   2016-01-14 08:00:15 AM   0.8%   185.1M of 256M   180.9M	
-	```
-
-	In the example above, the name of the application is `myfirstapp-pong`.  Replace `pong` with your name.  The name of your application will be concatenated with string `.mybluemix.net` and this will be the URL of your application.  As an example, the application `myfirstapp-pong` is accessible using the URL http://myfirstapp-pong.mybluemix.net.
-
-	>**IMPORTANT:** If you encounter an error message `host is taken`, it means that the application name you specified has already been used by another Bluemix user.  Issue the `cf push` command again but change the name of your application.  In the example above, instead of `myfirstapp-pong`, it can be `myfirstapp-pong2`.
+	
 
 	The `-m` switch allows you to specify the memory allocation of your application.
 

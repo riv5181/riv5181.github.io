@@ -12,16 +12,18 @@ In this tutorial you will learn how to use MQ Light. You will also learn how to 
 ####Logging in to your Bluemix Account
 1. Login to your Bluemix Account. 
 
-2. If you don't have an account yet or forgot to create one since it expired last week, create one. 
+2. If you don't have an account yet or forgot to create one since it expired, create one. 
 
 
-####Copy Sample Application
-You will download a copy of a sample application that you will deploy in your Bluemix account.
+####Downloading the `.war` files
+In this part, you will download two applications to be deployed at Bluemix.
 
 
-1. Create the directory `bluemixtemp` in the root directory.  Create a subdirectory `myfirstapp` in `bluemixtemp`.
+1. Create the directory `mqlighttutorial` in the root directory. 
 
-1. Download [PostgreSQLUpload.war](https://github.com/ibmjstart/bluemix-java-postgresql-uploader/releases/download/v1.1/PostgreSQLUpload.war) and save it in the `myfirstapp` subdirectory.
+2. Download [MQLight-Sender.war](https://github.com/riv5181/riv5181.github.io/blob/master/MQ-Light-Resources/Source%20Codes/mqlight-tutorial-sender/build/libs/MQLight-Sender.war) and save it in the `mqlighttutorial` subdirectory. 
+
+3. Download [MQLight-Receiver.war](https://github.com/riv5181/riv5181.github.io/blob/master/MQ-Light-Resources/Source%20Codes/mqlight-tutorial-receiver/build/libs/MQLight-Receiver.war) and save it in the `mqlighttutorial` subdirectory. 
 
 <br>
 

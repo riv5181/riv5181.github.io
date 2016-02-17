@@ -74,87 +74,22 @@ In this part, you will download two applications to be deployed at Bluemix.
 
 	<br>
 	
-1. Go back to the browser tab containing your Bluemix account.  In the menu, click `DASHBOARD`.  
-
-	The `Applications` section of your dashboard shows a widget representing the application `myfirstapp-<your_name>` you deployed earlier.
-
-	The widget shows some information regarding the application:
-	- **status**: your application is in a running state
-	- **route (a.k.a. URL)**: `myfirstapp-<your_name>.mybluemix.net`
-	- **runtime**: Liberty for Java (this is the type of web server hosting your application)
-	- **list of services the app is bound to**: currently empty
-
-	Take note that aside from logging in using the `cf` tool, the only other command you issued earlier is `cf push` which deployed your application in your Bluemix account.  You NEVER explicitly created/set-up a web server (e.g., Liberty for Java web server) to host your application.  When you issued the `cf push` command, Bluemix determined that you want to deploy a Java-based web application and automatically created the necessary web server (which we refer to in Bluemix as **runtime**) to host your application.
-
-	Currently the **list of services the app is bound to** is empty but when you add a PostgreSQL service later you will see an icon added in the widget representing the service.
-
-	<br>
 	
-1. Click the widget of your application to see its overview.
+####Add the MQLight Service and Bind it to the Applications
 
-	The overview shows the following information:
-	- **instances**: 1
-	- **memory quota**: 256MB
-	- **activity log**
-	- **routes**: `myfirstapp-<your_name>.mybluemix.net`
+1. Go to the `DASHBOARD` of your Bluemix Account and go click the 
 
-	Adjusting the **instances** value allows you to perform horizontal scaling.  For example, if you observe that a deployed application cannot handle anymore the number of users accessing the application then you may increase the number of instances.  However, take note that for every additional instance you add, your application will consume an additional memory space equal to the **memory quota**.  For example, if you have 2 instances and 256MB as the memory quota, then your application consumes 512MB of memory.
-
-	Adjusting the **memory quota** value allows you to perform vertical scaling.  
-
-	<br>
-	
-1. On the left pane, click the `Environment Variables` link.
-
-	Bluemix has a system-defined environment variable called `VCAP_SERVICES`.  Currently, the value of `VCAP_SERVICES` is empty.   You will see later the purpose of `VCAP_SERVICES`.
-	
-	<br>
-
-1. Open another browser tab (do not close the browser tab containing your Bluemix account).  Go to `http://myfirstapp-<your_name>.mybluemix.net` to verify that the sample application is successfully deployed.
-
-	> If you encounter a `404 Not Found: Requested route ('-----.mybluemix.net') does not exist`, it may mean any of the following:
-	>a. you typed the wrong URL (**solution:** double check the URL)
-	>b. your application is not yet running (**solution:** wait for your application to run, refer to the sample output above)
-	>c. your application failed to run (**solution:** look at the error message and issue again the `cf push` command)
-
-		
-	The sample application allows you to upload a text file in a PostgreSQL database.  You will test if this sample application is correctly running.
-
-	<br>
-
-1. Click the `Browse` button of the sample application and choose any text file.
-	> Make sure it is a text file and not a binary file.
-	> If you don't have any text file, just create one and place at least 3 lines of text.
-	
-	<br>
-	
-1. Click the `Upload` button.  If the upload operation is successful, the contents of the text file will be saved in a PostgreSQL database.  
-
-	HOWEVER, since you have not created any PostgreSQL database yet, you encountered the error `No PostgreSQL service URL found. Make sure you have bound the correct services to your app.`.  You will fix this error by creating a PostgreSQL server later.
-
-	<br>
-1. Close the browser tab containing the sample application.
-
-	<br>
-	
-####Add a PostgreSQL Service and Bind it to the Sample Application
-
-1. Go back to the browser tab containing your Bluemix account.  On the left pane, click the `Overview` link. 
+1. On the left pane, click the `Overview` link. 
 	
 1. Click the `ADD A SERVICE OR API` link.  You will be redirected to the `Catalog` page. 
 
-1. Look for the `postgresql` service and click it.
+1. Look for the `MQ Light` service and click it.
+ 
+1. Place the Application in the `dev` space.  
 
-	>**VERY IMPORTANT:**
-	The `postgresql` service that you will use in this tutorial is NOT the `PostgreSQL by Compose`.  
-	<br>
-	In the `Catalog` page, scroll down in the `CATALOG` page until you see the `Bluemix Labs Catalog` link.  Click this link.
-	<br>
-	Look for the service named `postgresql` and click this service.
+1. Connect it to the `MQLight-Sender-<your name>` application. 
 
-	<br>
-
-1. In the `Service name` text box, type `postgresql-myfirstservice`.
+1. In the `Service name` text box, use any name the service.
 
 1. Click the `CREATE` button.
 

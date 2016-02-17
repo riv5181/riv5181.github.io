@@ -77,7 +77,7 @@ In this part, you will download two applications to be deployed at Bluemix.
 	
 ####Add the MQLight Service and Bind it to the Applications
 
-1. Go to the `DASHBOARD` of your Bluemix Account and go click the 
+1. Go to the `DASHBOARD` of your Bluemix Account and go click the widget representing `MQLight-Sender-<your name>`.
 
 1. On the left pane, click the `Overview` link. 
 	
@@ -93,20 +93,15 @@ In this part, you will download two applications to be deployed at Bluemix.
 
 1. Click the `CREATE` button.
 
-1. When asked to restage your application, click the `RESTAGE` button.  Wait for your application to restage.
+1. When asked to restage your application, click the `RESTAGE` button.  
 
-1. Open another browser tab (do not close the browser tab containing your Bluemix account).  Go to `http://myfirstapp-<your_name>.mybluemix.net` to test if the sample application can already connect to the created PostgreSQL service.
+1. While the Application is restaging, click the widget representing `MQLight-Receiver-<your name>`
 
-	<br>
+1. Add or Bind the Application with the newly created MQ Light Service.
 
-1. Click the `Browse` button of the sample application and choose any text file.
+1. Restart the `MQLight-Receiver-<your name>` Application. 
 
-	
-1. Click the `Upload` button.  
 
-	This time, the upload is successful.  You will see the contents of the text file displayed on the page.   The sample application is programmed to display the contents of the PostgreSQL service.  Since the contents of the text file is displayed on the page, the contents are successfully saved in the PostgreSQL service.
-
-	<br>
 
 ####Analyze How the Sample Application communicates with PostgreSQL Service
 

@@ -1,21 +1,14 @@
 ---
+---
 layout: post
-title: Bluemix Basics
-permalink: /bluemix-basics2/
+title: MQ Light Tutorial
+permalink: /mqlighttutorial/
 ---
 
-##Application Development Tutorial
+###MQ Light Background
+IBM® [MQ Light for Bluemix™](https://www.ng.bluemix.net/docs/#services/MQLight/index.html#mqlight010) is a cloud based messaging service that allows easy messaging between apps. 
 
-###Bluemix Basics
-IBM [Bluemix](https://ibm.biz/bluemixph) is a platform as a service (PaaS) cloud technology of IBM.  You may develop applications and deploy them in Bluemix.
-
-In this tutorial you will learn how to deploy a sample JSP application in Bluemix.  In addition, you will also learn how to create a PostgreSQL database service that will be used by the sample application.
-
->**Prerequisite:**
-
->Having a basic background in web application development is required in this tutorial.
-
-<br>
+In this tutorial you will learn how to use MQ Light. You will also learn how to implement the service and how it can be configured to suite one's needs. 
 
 ####Create a Bluemix Account
 1. Go to [Bluemix](https://ibm.biz/bluemixph) and click the `SIGN UP` button.

@@ -9,7 +9,7 @@ name: Raguel L. Rivera
 description: Computer Science Student
 
 # URL of your avatar or profile pic (you could use your GitHub profile pic)
-avatar: https://avatars3.githubusercontent.com/u/8073649?v=3&u=ff3423bb6a6585128c893d710fc685266e69dfc4&s=140
+avatar: https://avatars2.githubusercontent.com/u/8073649?v=3&s=96
 
 #
 # Flags below are optional
@@ -19,9 +19,9 @@ avatar: https://avatars3.githubusercontent.com/u/8073649?v=3&u=ff3423bb6a6585128
 footer-links:
   dribbble:
   email: riv5181@gmail.com
-  facebook: pong.pantola@delasalle.ph
+  facebook: raguel.rivera.5@facebook.com
   flickr:
-  github: pong-pantola/jekyll-now
+  github: https://github.com/riv5181
   instagram:
   linkedin:
   pinterest:
@@ -34,7 +34,7 @@ footer-links:
 
 # Enter your Disqus shortname (not your username) to enable commenting on posts
 # You can find your shortname on the Settings page of your Disqus account
-disqus: applicationdevelopmenttutorial
+disqus: #applicationdevelopmenttutorial
 
 # Enter your Google Analytics web tracking code (e.g. UA-2110908-2) to activate tracking
 google_analytics:
@@ -47,7 +47,7 @@ url:
 # (http://yourusername.github.io/repository-name)
 # and NOT your User repository (http://yourusername.github.io)
 # then add in the baseurl here, like this: "/repository-name"
-baseurl: "http://pong-pantola.github.io"
+baseurl: "http://riv5181.github.io"
 
 #
 # !! You don't need to change any of the configuration flags below !!

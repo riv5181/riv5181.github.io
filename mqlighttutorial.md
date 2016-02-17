@@ -1,5 +1,4 @@
 ---
----
 layout: post
 title: MQ Light Tutorial
 permalink: /mqlighttutorial/

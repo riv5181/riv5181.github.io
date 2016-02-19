@@ -117,7 +117,7 @@ In this part, you will download two applications to be deployed at Bluemix.
 
 6. Type any message in the text box. Leave the topic as `public` and click the send button.
 
-7. Go to the `RECEIVER` tab and refresh the tab itself. At this point, you should be able to see the message you typed at the `SENDER` tab, assuming you did not modify the topic yet. 
+7. Go to the `RECEIVER` tab and refresh the tab itself. At this point, you should be able to see the message you typed at the `SENDER` tab, assuming you did not modify the topic. If you did, skip the following steps until you reach step 20. Read it, and go step 6. 
 
 8. Go to the `SERVER` tab and notice there is now a client in the `Sending` side. This represents the sender tab. Also notice the block, which contains the message you sent in the middle portion of the page. If you delve into the details, located at the lower right corner of the block, you can see more information about it, such as the TTL, topic used and its receivers. 
 
@@ -136,6 +136,20 @@ In this part, you will download two applications to be deployed at Bluemix.
 13. From the `RECIEVER` tab, click the `Begin Session` button and leave the topic as it is. Observe that the next page has no content whatsoever. This is because you obviously haven't sent any messages to this client yet. When you go to the `SERVER` tab, you will notice that there are two clients open in the `Receiving` side. 
 
 14. From the `SENDER` tab, click the `Begin Session` button. Type any message in the text box. Leave the topic as `public` and click the send button.
+
+15. Go to the `RECEIVER` and `RECEIVERX` tabs and refresh the tabs itself. At this point, you should be able to see the message you typed at the `SENDER` tab on both of them. 
+
+16. Go to the `SERVER` tab and notice the block, which contains the message you sent in the middle portion of the page. If you delve into the details, located at the lower right corner of the block, you can see more information about it. Also notice that it was send to two clients. This happened because those two receiver clients and the sender clients use the same topic. 
+
+17. Go to the `RECEIVERX` tab and and click the `Re-Initialize` button. This time, replace the topic from `public` to whatever you wish other than `public`. 
+
+18. From the `SENDER` tab, send another message still under the `public` topic.
+
+19. Refresh both receiver client tabs and notice that only the `RECEIVER` tab received the message. If you recall, the `RECEIVER` tab is using the `public` topic, and the `SENDER` tab sent the message under the `public` topic. You can gain more information in the `SERVER` tab and viewing the information on the message you sent from the sender client. 
+
+20. Go pat yourself on the back for a job well done. 
+
+<br>
 
 ####Analyze How the MQ Light Applications communicates with MQ Light Service
 

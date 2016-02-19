@@ -63,7 +63,6 @@ public class InitializationServlet extends HttpServlet
                             if (delivery.getType() == Delivery.Type.STRING)
                             {
                                 messages.add(((StringDelivery)delivery).getData());
-                                session.setAttribute("messages", messages);
                                 
                                 if(!((StringDelivery)delivery).getData().isEmpty())
                                 {
@@ -76,6 +75,13 @@ public class InitializationServlet extends HttpServlet
                 }
             }, null);
             
+            if(messages.isEmpty())
+            {
+                messages.add("");
+                session.setAttribute("messages", messages);
+            }
+            
+            session.setAttribute("messages", messages);
             session.setAttribute("mqlightclient", mqlightclient);
             response.sendRedirect("ReceiveMessagePage.jsp");
         }

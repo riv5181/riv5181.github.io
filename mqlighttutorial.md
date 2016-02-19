@@ -77,7 +77,7 @@ In this part, you will download two applications to be deployed at Bluemix.
 	
 ####Add the MQ Light Service and Bind it to the Applications
 
-1. Go to the `DASHBOARD` of your Bluemix Account and go click the widget representing `MQLight-Sender-<your name>`.
+1. Go to the `DASHBOARD` of your Bluemix Account and go click the widget representing `MQLight-Sender-<yourname>`.
 
 1. On the left pane, click the `Overview` link. 
 	
@@ -87,7 +87,7 @@ In this part, you will download two applications to be deployed at Bluemix.
  
 1. Place the Application in the `dev` space.  
 
-1. Connect it to the `MQLight-Sender-<your name>` application. 
+1. Connect it to the `MQLight-Sender-<yourname>` application. 
 
 1. In the `Service name` text box, use any name the service.
 
@@ -95,11 +95,11 @@ In this part, you will download two applications to be deployed at Bluemix.
 
 1. When asked to restage your application, click the `RESTAGE` button.  
 
-1. While the Application is restaging, click the widget representing `MQLight-Receiver-<your name>`
+1. While the Application is restaging, click the widget representing `MQLight-Receiver-<yourname>`
 
 1. Add or Bind the Application with the newly created MQ Light Service.
 
-1. Restart the `MQLight-Receiver-<your name>` Application. 
+1. Restart the `MQLight-Receiver-<yourname>` Application. 
 
 <br>
 
@@ -117,7 +117,7 @@ In this part, you will download two applications to be deployed at Bluemix.
 
 6. Type any message in the text box. Leave the topic as `public` and click the send button.
 
-7. Go to the `RECEIVER` tab and refresh the tab itself. At this point, you should be able to see the message you typed at the `SENDER` tab, assuming you did not modify the topic. If you did, skip the following steps until you reach step 20. Read it, and go step 6. 
+7. Go to the `RECEIVER` tab and refresh the tab itself. At this point, you should be able to see the message you typed at the `SENDER` tab, assuming you did not modify the topic. <s>If you did, skip the following steps until you reach step 20. Read it, and go step 6.</s> 
 
 8. Go to the `SERVER` tab and notice there is now a client in the `Sending` side. This represents the sender tab. Also notice the block, which contains the message you sent in the middle portion of the page. If you delve into the details, located at the lower right corner of the block, you can see more information about it, such as the TTL, topic used and its receivers. 
 

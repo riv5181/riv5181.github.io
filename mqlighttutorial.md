@@ -190,8 +190,8 @@ It seems impossible for the sample application to be able to communicate with th
 
 	<br>
 	
-1. This is a sample code from the sender client. It is simplified version of how sending works in MQ Light. You can extract the contents of the `.war` file if you wish. 
-	
+1. This is a sample code from the sender and receiver client. It is a simplified version of how sending and receiving works in MQ Light. You may look at the [Source Codes](https://github.com/riv5181/riv5181.github.io/tree/master/MQ-Light-Resources/Source%20Codes) and [Documentation](http://mqlight.github.io/java-mqlight/?cm_mc_uid=47908507829914552831905&cm_mc_sid_50200000=1455286883) if you wish. 
+	Sender Client: 
 	```java
 		NonBlockingClient.create(null, new NonBlockingClientAdapter<Void>() 
         	{
@@ -204,39 +204,27 @@ It seems impossible for the sample application to be able to communicate with th
             
         	}, null);
 	```
-
-	The method parses the contents of `VCAP_SERVICES` and looks for the credentials of the PostgreSQL service.  This approach allowed the sample application to dynamically get the credentials of the service instead of hard coding it.
-
-	The use of `VCAP_SERVICES` explains how the sample application is able to connect to the PostgreSQL service.  However, this did not explain how a database table (that stores the content of text files) was created.  Recall that you never performed a task that explicilty created a table in the PostgreSQL service.
-
-	`PostgreSQLClient.java` has another method called `createTable`:
 	
+	Receiver Client: 
 	```java
-		private void createTable() throws Exception {
-			String sql = "CREATE TABLE IF NOT EXISTS posts (" +
-							"id serial primary key, " +
-							"text text" +
-						 ");";
-			Connection connection = null;
-			PreparedStatement statement = null;
-			
-			try {
-				connection = getConnection();
-				statement = connection.prepareStatement(sql);
-				statement.executeUpdate();
-			} finally {			
-				if (statement != null) {
-					statement.close();
-				}
-				
-				if (connection != null) {
-					connection.close();
-				}
-			}
-		}
+		NonBlockingClient.create(null, new NonBlockingClientAdapter<Void>() 
+        	{
+            		public void onStarted(NonBlockingClient client, Void context) 
+            		{
+                		client.subscribe("public",  new DestinationAdapter<Void>() 
+                		{
+                    			public void onMessage(NonBlockingClient client, Void context, Delivery delivery) 
+                    			{
+                        			if (delivery.getType() == Delivery.Type.STRING)
+                            			System.out.println(((StringDelivery)delivery).getData());
+                    			}
+                		}, null, null);
+                
+            		}
+        	}, null);
 	```
-
-	The `createTable` method allowed the tables to be programmatically created (i.e., no need for you to manually create the table).  In usual practices, the database administrator creates the tables.  However, the sample application was designed to programmatically create the table to easily demonstrate the use of a service in Bluemix.
+	
+	The method `NonBlockingClient` represents the client one wishes to create. It has may capabilities such as to create the client, use it to send the message and terminate it after tasks are completed. 
 
 	<br>
 	

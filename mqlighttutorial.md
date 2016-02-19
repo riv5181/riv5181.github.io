@@ -107,9 +107,9 @@ In this part, you will download two applications to be deployed at Bluemix.
 
 1. Go to the `DASHBOARD` of your Bluemix Account and go click the widget representing the MQ Light Service. Call the tab you are currently in the `SERVER` Tab. 
 
-2. Open another tab and go to the `DASHBOARD` of your Bluemix Account and go click the widget representing the Sender Application. Run it and call the tab you are currently in the `SENDER` tab. From the tab, go to the `InitializationPage.jsp`. The link for the app should be called `mqlight-sender-<yourname>.mqbluemix.net/InitializationPage.jsp`. 
+2. Open another tab and go to the `DASHBOARD` of your Bluemix Account and go click the widget representing the Sender Application. Run it and call the tab you are currently in the `SENDER` tab. From the tab, go to the `InitializationPage.jsp`. The link for the app should be called `mqlight-sender-<yourname>.mybluemix.net/InitializationPage.jsp`. 
 
-3. Open another tab and go to the `DASHBOARD` of your Bluemix Account and go click the widget representing the Receiver Application. Run it and call the tab you are currently in the `RECEIVER` tab. From the tab, go to the `InitializationPage.jsp`. The link for the app should be called `mqlight-receiver-<yourname>.mqbluemix.net/InitializationPage.jsp`. 
+3. Open another tab and go to the `DASHBOARD` of your Bluemix Account and go click the widget representing the Receiver Application. Run it and call the tab you are currently in the `RECEIVER` tab. From the tab, go to the `InitializationPage.jsp`. The link for the app should be called `mqlight-receiver-<yourname>.mybluemix.net/InitializationPage.jsp`. 
 
 4. From the `RECIEVER` tab, click the `Begin Session` button and leave the topic as it is. Observe that the next page has no content whatsoever. This is because you obviously haven't sent any messages yet. When you go to the `SERVER` tab, you will notice that a client has opened up in the `Receiving` side. This is where your messages will be sent under the topic `public`. 
 
@@ -131,7 +131,7 @@ In this part, you will download two applications to be deployed at Bluemix.
 	> cf push MQLight-ReceiverX-riv5181 -m 256M -p MQLight-Receiver.war
 	```
 
-12. Go to the `DASHBOARD` of your Bluemix Account and go click the widget representing the Receiver Application you uploaded. Run it and call the tab you are currently in the `RECEIVERX` tab. From the tab, go to the `InitializationPage.jsp`. The link for the app should be called `mqlight-receiverx-<yourname>.mqbluemix.net/InitializationPage.jsp`. 
+12. Go to the `DASHBOARD` of your Bluemix Account and go click the widget representing the Receiver Application you uploaded. Run it and call the tab you are currently in the `RECEIVERX` tab. From the tab, go to the `InitializationPage.jsp`. The link for the app should be called `mqlight-receiverx-<yourname>.mybluemix.net/InitializationPage.jsp`. 
 
 13. From the `RECIEVER` tab, click the `Begin Session` button and leave the topic as it is. Observe that the next page has no content whatsoever. This is because you obviously haven't sent any messages to this client yet. When you go to the `SERVER` tab, you will notice that there are two clients open in the `Receiving` side. 
 

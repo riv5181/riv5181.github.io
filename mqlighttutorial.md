@@ -101,7 +101,17 @@ In this part, you will download two applications to be deployed at Bluemix.
 
 1. Restart the `MQLight-Receiver-<your name>` Application. 
 
+<br>
 
+####Analyzing and Discovering how MQ Light works
+
+1. Go to the `DASHBOARD` of your Bluemix Account and go click the widget representing the MQ Light Service. Call the tab you are currently in the `SERVER` Tab. 
+
+2. Open another tab and go to the `DASHBOARD` of your Bluemix Account and go click the widget representing the Sender Application. Run it and call the tab you are currently in the `SENDER` tab. From the tab, open `InitializationPage.jsp`. The link for the app should be called `mqlight-sender-<yourname>.mqbluemix.net/InitializationPage.jsp`. 
+
+3. Open another tab and go to the `DASHBOARD` of your Bluemix Account and go click the widget representing the Receiver Application. Run it and call the tab you are currently in the `RECEIVER` tab. From the tab, open `InitializationPage.jsp`. The link for the app should be called `mqlight-receiver-<yourname>.mqbluemix.net/InitializationPage.jsp`. 
+
+4. From the `RECIEVER` tab, click the `Begin Session` button and leave the topic as it is. 
 
 ####Analyze How the Sample Application communicates with PostgreSQL Service
 

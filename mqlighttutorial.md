@@ -28,7 +28,7 @@ In this part, you will download two applications to be deployed at Bluemix.
 <br>
 
 
-####Deploy MQLight Applications in Bluemix using the `cf` tool.
+####Deploy MQ Light Applications in Bluemix using the `cf` tool.
 
 1. Open a terminal window and go to the `mqlighttutorial` subdirectory.
 
@@ -75,7 +75,7 @@ In this part, you will download two applications to be deployed at Bluemix.
 	<br>
 	
 	
-####Add the MQLight Service and Bind it to the Applications
+####Add the MQ Light Service and Bind it to the Applications
 
 1. Go to the `DASHBOARD` of your Bluemix Account and go click the widget representing `MQLight-Sender-<your name>`.
 
@@ -107,15 +107,37 @@ In this part, you will download two applications to be deployed at Bluemix.
 
 1. Go to the `DASHBOARD` of your Bluemix Account and go click the widget representing the MQ Light Service. Call the tab you are currently in the `SERVER` Tab. 
 
-2. Open another tab and go to the `DASHBOARD` of your Bluemix Account and go click the widget representing the Sender Application. Run it and call the tab you are currently in the `SENDER` tab. From the tab, open `InitializationPage.jsp`. The link for the app should be called `mqlight-sender-<yourname>.mqbluemix.net/InitializationPage.jsp`. 
+2. Open another tab and go to the `DASHBOARD` of your Bluemix Account and go click the widget representing the Sender Application. Run it and call the tab you are currently in the `SENDER` tab. From the tab, go to the `InitializationPage.jsp`. The link for the app should be called `mqlight-sender-<yourname>.mqbluemix.net/InitializationPage.jsp`. 
 
-3. Open another tab and go to the `DASHBOARD` of your Bluemix Account and go click the widget representing the Receiver Application. Run it and call the tab you are currently in the `RECEIVER` tab. From the tab, open `InitializationPage.jsp`. The link for the app should be called `mqlight-receiver-<yourname>.mqbluemix.net/InitializationPage.jsp`. 
+3. Open another tab and go to the `DASHBOARD` of your Bluemix Account and go click the widget representing the Receiver Application. Run it and call the tab you are currently in the `RECEIVER` tab. From the tab, go to the `InitializationPage.jsp`. The link for the app should be called `mqlight-receiver-<yourname>.mqbluemix.net/InitializationPage.jsp`. 
 
-4. From the `RECIEVER` tab, click the `Begin Session` button and leave the topic as it is. 
+4. From the `RECIEVER` tab, click the `Begin Session` button and leave the topic as it is. Observe that the next page has no content whatsoever. This is because you obviously haven't sent any messages yet. When you go to the `SERVER` tab, you will notice that a client has opened up in the `Receiving` side. This is where your messages will be sent under the topic `public`. 
 
-####Analyze How the Sample Application communicates with PostgreSQL Service
+5. From the `SENDER` tab, click the `Begin Session` button. 
 
-Reviewing the procedure above, you did two important tasks: (1) deployed the sample application and (2) created a PostgreSQL service.
+6. Type any message in the text box. Leave the topic as `public` and click the send button.
+
+7. Go to the `RECEIVER` tab and refresh the tab itself. At this point, you should be able to see the message you typed at the `SENDER` tab, assuming you did not modify the topic yet. 
+
+8. Go to the `SERVER` tab and notice there is now a client in the `Sending` side. This represents the sender tab. Also notice the block, which contains the message you sent in the middle portion of the page. If you delve into the details, located at the lower right corner of the block, you can see more information about it, such as the TTL, topic used and its receivers. 
+
+9. Go back to the `SENDER` side, and type any message in the text box. This time, change the topic into anything you wish other than `public` and click send. 
+
+10. Go to the `RECEIVER` tab, and refresh the tab itself. You should be able to notice that the message you sent at step 9 did not show up. This is because the topics used in the `RECEIVER` and `SENDER` tabs are different. You can also get more information about it if you go to the `SERVER` tab, and check out the details of the message. 
+
+11. Push another receiver cilent to your Bluemix Account. Name this one as `MQLight-ReceiverX-<yourname>`. You can use the same .war file. DO NOT FORGET to bind it to the MQ Light Service you created earlier. 
+
+	```text
+	> cf push MQLight-ReceiverX-riv5181 -m 256M -p MQLight-Receiver.war
+	```
+
+12. Go to the `DASHBOARD` of your Bluemix Account and go click the widget representing the Receiver Application you uploaded. Run it and call the tab you are currently in the `RECEIVERX` tab. From the tab, go to the `InitializationPage.jsp`. The link for the app should be called `mqlight-receiverx-<yourname>.mqbluemix.net/InitializationPage.jsp`. 
+
+13. From the `RECIEVER` tab, click the `Begin Session` button and leave the topic as it is. Observe that the next page has no content whatsoever. This is because you obviously haven't sent any messages to this client yet. When you go to the `SERVER` tab, you will notice that there are two clients open in the `Receiving` side. 
+
+14. From the `SENDER` tab, click the `Begin Session` button. Type any message in the text box. Leave the topic as `public` and click the send button.
+
+####Analyze How the MQ Light Applications communicates with MQ Light Service
 
 It seems impossible for the sample application to be able to communicate with the PostgreSQL service since you have not updated the sample application to use the credentials of the service (e.g., username, password, IP address, port no., etc.).  
 

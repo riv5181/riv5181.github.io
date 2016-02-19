@@ -198,8 +198,7 @@ It seems impossible for the sample application to be able to communicate with th
         	{
             		public void onStarted(NonBlockingClient client, Void context) 
             		{
-                    		message = scanner.nextLine();
-                    		client.send("public", message, null);
+                    		client.send("public", "Hello World!", null);
                     		client.stop(null,null);
             		}
             
@@ -226,7 +225,15 @@ It seems impossible for the sample application to be able to communicate with th
         	}, null);
 	```
 	
-	The method `NonBlockingClient` represents the client one wishes to create. It has may capabilities such as to create the client, use it to send the message and terminate it after tasks are completed. 
+	The method `NonBlockingClient` represents the client one wishes to create. It has may capabilities such as to create the client, use it to send the message, subscribe it to a topic and terminate it after tasks are completed. When `NonBlockingClient` is created, notice that the first parameter passed is `null`. This is where the location of the MQ Light service is passed. If you were to, let's say, download the MQ Light Service to your desktop, the location of the service would be `amqp://locahost`, assuming no other security measures were placed. Since the clients use the service located in Bluemix, it uses `null`. As for the reason why, it uses the `VCAP_SERVICES` provided in the `Enviroment Variables`. 
+	
+	`NonBlockingClient.send` is used to send messages. If you look at the code, you can see the parameters used. The first one would be the topic used, in this case, it uses `public`, and the second parameter contains the message. Trivia, the message sent is not limited to string. You can also use this to send messages in JSON format and also other file types. 
+	
+	`NonBlockingClient.subscribe`, subscribes the client to the provided topic, which is `public`, for th purposes of testing. You can use other topics in the form of a string. Once the client is subscribed, the client will receive messages from ANYONE as long as they have the same topic. 
+	
+	`NonBlockingClient.stop`, obviously stops the client. 
+	
+	There are other classes that is used with the MQ Light API. One is the `ClientOptions` where you can set the Username and password that is used to a configured MQ Light Service with security options. You can also use this class, where you can set the id to anything, instead of the randomly generated ID that is seen in the `SERVER` tab, like `AUTO_38abe01` and `AUTO_cd987ab`. There are many more functions you can do with MQ Light. See the [Documentation](http://mqlight.github.io/java-mqlight/?cm_mc_uid=47908507829914552831905&cm_mc_sid_50200000=1455286883) for more details. 
 
 	<br>
 	

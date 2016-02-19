@@ -191,6 +191,7 @@ It seems impossible for the sample application to be able to communicate with th
 	<br>
 	
 1. This is a sample code from the sender and receiver client. It is a simplified version of how sending and receiving works in MQ Light. You may look at the [Source Codes](https://github.com/riv5181/riv5181.github.io/tree/master/MQ-Light-Resources/Source%20Codes) and [Documentation](http://mqlight.github.io/java-mqlight/?cm_mc_uid=47908507829914552831905&cm_mc_sid_50200000=1455286883) if you wish. 
+
 	Sender Client: 
 	```java
 		NonBlockingClient.create(null, new NonBlockingClientAdapter<Void>() 
@@ -204,6 +205,7 @@ It seems impossible for the sample application to be able to communicate with th
             
         	}, null);
 	```
+	
 	
 	Receiver Client: 
 	```java

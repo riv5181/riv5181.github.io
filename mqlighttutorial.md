@@ -180,11 +180,11 @@ It seems impossible for the sample application to be able to communicate with th
 
 	The value above contains the credentials of the MQ Light service.  This value was produced when you created the service earlier.  
 
-	Recall that you clicked the `ADD A SERVICE OR API` link earlier then created the PostgreSQL service.  Adding a service (or API) does two things:
+	Recall that you clicked the `ADD A SERVICE OR API` link earlier then created the MQ Light service.  Adding a service (or API) does two things:
 		- create a service
 		- bind the service to the application
 
-	Binding the MQ Light service to the application simply instructs Bluemix to share the credentials of the MQ Light service to the sample application.  The credentials are shared by placing the values of the credentials to `VCAP_SERVICES`.
+	Binding the MQ Light service to the application simply instructs Bluemix to share the credentials of the MQ Light service to the application.  The credentials are shared by placing the values of the credentials to `VCAP_SERVICES`.
 
 	However, it needs to be emphasized that even if the credentials are shared through the `VCAP_SERVICES`, this sharing is useless unless the application explicitly use the `VCAP_SERVICES` environment variable.
 
@@ -237,16 +237,16 @@ It seems impossible for the sample application to be able to communicate with th
 
 	<br>
 	
-####Delete the Sample Application and PostgreSQL Service
+####Delete the Application and MQ Light Service
 You may delete applications and services that you don't anymore need.  This will free up some resources which is essential to accommodate new applications and services you want to deploy in the future.
 
 1. Go back to the browser tab containing your Bluemix account.  In the menu, click `DASHBOARD`.  
 
-	Notice that the widget of the sample application got updated.  An icon was added in the widget.  If you will mouse hover on the icon, you will see that the icon refers to the PostgreSQL service you created earlier.  The presence of this icon in the widget of the sample application  means that the service is bound to the application.  
+	Notice that the widget of the sample application got updated.  An icon was added in the widget.  If you will mouse hover on the icon, you will see that the icon refers to the MQ Light service you created earlier.  The presence of this icon in the widget of the sample application  means that the service is bound to the application.  
 
 	Take note that it is possible that you may have additional services bound to the same application.
 
-	In addition, notice that a widget for the PostgreSQL service is also available.  It also has an icon that refers to the sample application.  The presence of this icon in the widget of the PostgreSQL service means that the application may use this service. 
+	In addition, notice that a widget for the MQ Light service is also available.  It also has an icon that refers to the sample application.  The presence of this icon in the widget of the MQ Light service means that the application may use this service. 
 
 	Take note that it is possible that you may have additional applications bound to the same service.
 	
@@ -254,9 +254,25 @@ You may delete applications and services that you don't anymore need.  This will
  
 1. Click the `gear` icon in the widget of the sample application.
 
-1. Click the `Delete App` entry.  In the `Services` tab, make sure that the PostgreSQL service is selected.  In the `Routes` tab, make sure that the route (i.e., URL) is selected.
+1. Click the `Delete App` entry.  In the `Services` tab, make sure that the MQ Light service is selected.  In the `Routes` tab, make sure that the route (i.e., URL) is selected.
 
 1. Click the `DELETE` button.
+
+<br>
+
+####Resources
+
+1. [Sender Client .war File](https://github.com/riv5181/riv5181.github.io/blob/master/MQ-Light-Resources/Source%20Codes/mqlight-tutorial-sender/build/libs/MQLight-Sender.war?raw=true)
+
+2. [Receiver Client .war File](https://github.com/riv5181/riv5181.github.io/blob/master/MQ-Light-Resources/Source%20Codes/mqlight-tutorial-receiver/build/libs/MQLight-Receiver.war?raw=true)
+
+3. [Source Code used for this tutorial](https://github.com/riv5181/riv5181.github.io/tree/master/MQ-Light-Resources/Source%20Codes)
+
+4. [Documentation for MQ Light](http://mqlight.github.io/java-mqlight/?cm_mc_uid=47908507829914552831905&cm_mc_sid_50200000=1455286883)
+
+5. [MQ Light API and Service for local use](https://developer.ibm.com/messaging/mq-light/)
+
+6. [Developing an MQ Light application with Java](https://developer.ibm.com/messaging/2015/05/22/getting-started-with-java-apps-using-the-mq-light-service-for-bluemix/)
 
 <br>
 

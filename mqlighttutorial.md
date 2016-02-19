@@ -172,10 +172,9 @@ It seems impossible for the sample application to be able to communicate with th
             		"version": "2",
             		"connectionLookupURI": "http://mqlightprod-lookup.ng.bluemix.net/Lookup?serviceId=692d9e47-66ad-4f12-8d4d-611adfddbd90&tls=true",
             		"username": "CKZKSv6UdKQp"
-         	   }
-      	      }
-   	    ]
-	  }
+         	     }
+      	         }
+   	      ]
 	}
 	```
 

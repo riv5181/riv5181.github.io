@@ -1,6 +1,7 @@
 ---
 layout: post
-title: Tutorials and Other Stuff
+title: MY BLOG OF SORTS
 ---
+###TUTORIALS
 
-Blah
+1. [IBM MQ Light](http://riv5181.github.io/mqlighttutorial/)

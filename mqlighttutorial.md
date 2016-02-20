@@ -231,7 +231,7 @@ It seems impossible for the sample application to be able to communicate with th
 	
 	`NonBlockingClient.send` is used to send messages. If you look at the code, you can see the parameters used. The first one would be the topic used, in this case, it uses `public`, and the second parameter contains the message. Trivia, the message sent is not limited to string. You can also use this to send messages in JSON format and also other file types. 
 	
-	`NonBlockingClient.subscribe`, subscribes the client to the provided topic, which is `public`, for th purposes of testing. You can use other topics in the form of a string. Once the client is subscribed, the client will receive messages from ANYONE as long as they have the same topic. 
+	`NonBlockingClient.subscribe`, subscribes the client to the provided topic, which is `public`, for th purposes of testing. You can use other topics in the form of a string. Once the client is subscribed, the client will receive messages from ANYONE as long as they have the same topic. Take note that the receiver client will run continuously to receive messages until you stop the client. 
 	
 	`NonBlockingClient.stop`, obviously stops the client. 
 	

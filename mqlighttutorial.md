@@ -125,7 +125,7 @@ In this part, you will download two applications to be deployed at Bluemix.
 
 10. Go to the `RECEIVER` tab, and refresh the tab itself. You should be able to notice that the message you sent at step 9 did not show up. This is because the topics used in the `RECEIVER` and `SENDER` tabs are different. You can also get more information about it if you go to the `SERVER` tab, and check out the details of the message. 
 
-11. Push another receiver cilent to your Bluemix Account. Name this one as `MQLight-ReceiverX-<yourname>`. You can use the same .war file. DO NOT FORGET to bind it to the MQ Light Service you created earlier. 
+11. Push another receiver cilent to your Bluemix Account. Name this one as `MQLight-ReceiverX-<yourname>`. You can use the same [MQLight-Receiver.war](https://github.com/riv5181/riv5181.github.io/blob/master/MQ-Light-Resources/Source%20Codes/mqlight-tutorial-receiver/build/libs/MQLight-Receiver.war?raw=true) file. DO NOT FORGET to bind it to the MQ Light Service you created earlier and to restart the application. 
 
 	```text
 	> cf push MQLight-ReceiverX-riv5181 -m 256M -p MQLight-Receiver.war

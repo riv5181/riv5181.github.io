@@ -97,7 +97,7 @@ In this part, you will download two applications to be deployed at Bluemix.
 
 1. While the Application is restaging, click the widget representing `MQLight-Receiver-<yourname>`
 
-1. Add or Bind the Application with the newly created MQ Light Service.
+1. Bind the Application with the newly created MQ Light Service.
 
 1. Restart the `MQLight-Receiver-<yourname>` Application. 
 

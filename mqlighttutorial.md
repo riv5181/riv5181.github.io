@@ -50,13 +50,13 @@ In this part, you will download two applications to be deployed at Bluemix.
 3. Upload the [MQLight-Sender.war](https://github.com/riv5181/riv5181.github.io/blob/master/MQ-Light-Resources/Source%20Codes/mqlight-tutorial-sender/build/libs/MQLight-Sender.war?raw=true) file to your Bluemix account.
 
 	```text
-	> cf push MQLight-Sender-<your_name> -m 256M -p MQLight-Sender.war
+	> cf push MQLight-Sender-<yourname> -m 256M -p MQLight-Sender.war
 	```
 	
 4. Upload the [MQLight-Receiver.war](https://github.com/riv5181/riv5181.github.io/blob/master/MQ-Light-Resources/Source%20Codes/mqlight-tutorial-receiver/build/libs/MQLight-Receiver.war?raw=true) file to your Bluemix account.
 	
 	```text
-	> cf push MQLight-Receiver-<your_name> -m 256M -p MQLight-Receiver.war
+	> cf push MQLight-Receiver-<yourname> -m 256M -p MQLight-Receiver.war
 	```
 
 

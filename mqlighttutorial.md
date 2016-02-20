@@ -117,7 +117,7 @@ In this part, you will download two applications to be deployed at Bluemix.
 
 6. Type any message in the text box. Leave the topic as `public` and click the send button.
 
-7. Go to the `RECEIVER` tab and refresh the tab itself. At this point, you should be able to see the message you typed at the `SENDER` tab, assuming you did not modify the topic. <s>If you did, skip the following steps until you reach step 20. Read it, and go step 6.</s> 
+7. Go to the `RECEIVER` tab and refresh the tab itself. At this point, you should be able to see the message you typed at the `SENDER` tab, assuming you did not modify the topic. <s>If you did, skip the following steps until you reach step 20. Read it, and go back to step 6.</s> 
 
 8. Go to the `SERVER` tab and notice there is now a client in the `Sending` side. This represents the sender tab. Also notice the block, which contains the message you sent in the middle portion of the page. If you delve into the details, located at the lower right corner of the block, you can see more information about it, such as the TTL, topic used and its receivers. 
 

@@ -190,7 +190,7 @@ It seems impossible for the sample application to be able to communicate with th
 
 	<br>
 	
-1. This is a sample code from the sender and receiver client. It is a simplified version of how sending and receiving works in MQ Light. You may look at the [Source Codes](https://github.com/riv5181/riv5181.github.io/tree/master/MQ-Light-Resources/Source%20Codes) and [Documentation](http://mqlight.github.io/java-mqlight/?cm_mc_uid=47908507829914552831905&cm_mc_sid_50200000=1455286883) if you wish. 
+1. This is a sample code from the sender and receiver client. It is a simplified version of how sending and receiving works in MQ Light. You may look at the [Source Codes](https://github.com/riv5181/mqlighttutorial.git) and [Documentation](http://mqlight.github.io/java-mqlight/?cm_mc_uid=47908507829914552831905&cm_mc_sid_50200000=1455286883) if you wish. 
 	<br>
 	Sender Client
 	
@@ -268,7 +268,11 @@ You may delete applications and services that you don't anymore need.  This will
 
 2. [Receiver Client .war File](https://github.com/riv5181/riv5181.github.io/blob/master/MQ-Light-Resources/Source%20Codes/mqlight-tutorial-receiver/build/libs/MQLight-Receiver.war?raw=true)
 
-3. [Source Code used for this tutorial](https://github.com/riv5181/riv5181.github.io/tree/master/MQ-Light-Resources/Source%20Codes)
+3. [Source Code used for this tutorial](https://github.com/riv5181/mqlighttutorial.git)
+ 
+	```text
+	> git clone https://github.com/riv5181/mqlighttutorial.git
+	```
 
 4. [Documentation for MQ Light](http://mqlight.github.io/java-mqlight/?cm_mc_uid=47908507829914552831905&cm_mc_sid_50200000=1455286883)
 
